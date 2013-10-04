@@ -383,10 +383,11 @@ NSString *const ECSlidingViewTopDidReset             = @"ECSlidingViewTopDidRese
     }
     [self updateTopViewHorizontalCenter:self.resettedCenter];
   } completion:^(BOOL finished) {
+    [self topViewHorizontalCenterDidChange:self.resettedCenter];
     if (complete) {
       complete();
     }
-    [self topViewHorizontalCenterDidChange:self.resettedCenter];
+    
   }];
 }
 
